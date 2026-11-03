@@ -195,11 +195,43 @@ Essas limitações devem ser consideradas na interpretação dos resultados.
 
 ## 14. Estudo de caso real
 
-**Status: pendente de pesquisa e documentação.**
+## 14. Estudo de caso real — Vulnerabilidade nas câmeras TRENDnet SecurView
 
-Esta seção deverá apresentar um caso real de vulnerabilidade, avaliação de segurança ou estratégia de proteção aplicada a um dispositivo IoT ou sistema embarcado.
+### 14.1 Dispositivo analisado
 
-O caso deverá identificar o dispositivo, a superfície de ataque, o problema encontrado, as medidas de mitigação e as lições aplicáveis ao NexaSense.
+O caso envolve câmeras IP da linha SecurView, comercializadas pela empresa TRENDnet para monitoramento remoto de residências e estabelecimentos.
+
+### 14.2 Superfície de ataque
+
+A superfície de ataque envolvia a interface de comunicação pela internet e o software responsável pelo controle de acesso às transmissões de áudio e vídeo.
+
+### 14.3 Problema identificado
+
+Em 2012, foi identificada uma falha que permitia acessar transmissões das câmeras sem informar as credenciais de autenticação.
+
+Além disso, a FTC apontou que credenciais de usuários eram transmitidas em texto legível pela internet e armazenadas dessa forma nos dispositivos móveis utilizados com as câmeras.
+
+O problema resultou na exposição pública de transmissões privadas de centenas de consumidores.
+
+### 14.4 Medidas de mitigação
+
+Entre as medidas adotadas estavam a disponibilização de atualizações de firmware, a comunicação aos consumidores afetados e a exigência de um programa abrangente de segurança da informação.
+
+### 14.5 Relação com o NexaSense
+
+O caso demonstra a importância de proteger informações transmitidas por dispositivos IoT, implementar autenticação adequada e realizar testes de segurança no software.
+
+No NexaSense, essas lições fundamentam as recomendações de proteção da interface serial, segurança das futuras comunicações Wi-Fi e controle de acesso.
+
+É importante destacar que o problema das câmeras TRENDnet não foi reproduzido no NexaSense. O caso foi utilizado como referência externa para fundamentar as recomendações de segurança.
+
+### 14.6 Fonte
+
+Federal Trade Commission (FTC). Marketer of Internet-Connected Home Security Video Cameras Settles FTC Charges It Failed to Protect Consumers' Privacy. 2013.
+
+Disponível em: https://www.ftc.gov/news-events/news/press-releases/2013/09/marketer-internet-connected-home-security-video-cameras-settles-ftc-charges-it-failed-protect
+
+Acesso em: 3 nov. 2026.
 
 ## 15. Conclusão
 
