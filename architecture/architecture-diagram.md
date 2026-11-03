@@ -1,37 +1,27 @@
-# Arquitetura do Dispositivo — NexaSense
+# Diagrama de Arquitetura — NexaSense
 
 ## 1. Visão geral
 
-O protótipo NexaSense utiliza um ESP32 conectado a um sensor DHT22 para realizar medições de temperatura e umidade.
+O protótipo utiliza um ESP32 conectado a um sensor DHT22 para realizar a leitura de temperatura e umidade. Os dados são processados pelo microcontrolador e apresentados no Monitor Serial do Wokwi.
 
-O microcontrolador executa um firmware desenvolvido em C++ (Arduino), responsável por inicializar o sensor, obter as medições e exibir os resultados por meio da comunicação serial.
+## 2. Diagrama
 
-## 2. Componentes
+```mermaid
+flowchart TD
+    A["Sensor DHT22<br/>Temperatura e umidade"] -->|"Sinal digital — GPIO 15"| B["ESP32"]
+    B --> C["Firmware NexaSense"]
+    C --> D["Leitura e processamento dos dados"]
+    D --> E["Interface Serial — 115200 baud"]
+    E --> F["Monitor Serial do Wokwi"]
+```
 
-| Componente | Função |
-|---|---|
-| ESP32 | Processamento e execução do firmware |
-| DHT22 | Medição de temperatura e umidade |
-| GPIO15 | Recebimento dos dados do sensor |
-| Serial | Exibição de informações de depuração |
-| Wokwi | Ambiente de simulação do protótipo |
+## 3. Componentes
 
-## 3. Fluxo de funcionamento
+- **DHT22:** realiza a medição de temperatura e umidade.
+- **ESP32:** recebe os dados do sensor e executa o firmware.
+- **Firmware:** realiza a leitura, valida os valores e envia as informações pela interface serial.
+- **Monitor Serial:** apresenta os dados e mensagens de depuração.
 
-1. O ESP32 é inicializado.
-2. O firmware configura o sensor DHT22.
-3. O sensor fornece as medições ao ESP32 pelo GPIO15.
-4. O firmware processa as informações.
-5. Os resultados são apresentados no Serial Monitor.
+## 4. Observação sobre o escopo
 
-## 4. Interfaces identificadas
-
-- GPIO15: comunicação de dados com o sensor.
-- 3V3 e GND: alimentação do sensor.
-- Interface serial: saída de informações de depuração.
-
-## 5. Limitações
-
-A arquitetura documentada representa exclusivamente o protótipo simulado no Wokwi.
-
-Interfaces físicas UART e JTAG, memória flash, conectividade Wi-Fi e comunicação com serviços externos ainda não foram verificadas em hardware real.
+A arquitetura representa o protótipo desenvolvido no ambiente Wokwi. Não foram implementadas comunicação Wi-Fi, MQTT, HTTP ou conexão com serviços externos. As interfaces físicas UART, JTAG e a memória Flash não foram submetidas a testes físicos.
