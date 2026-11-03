@@ -152,3 +152,6 @@ Os resultados devem ser interpretados considerando as limitações do ambiente W
 **Instituição:** UniFECAF  
 **Disciplina:** Hardware Hacking  
 **Projeto:** Do Protótipo ao Produto Seguro — Avaliação de Segurança de um Dispositivo IoT
+
+link da apresentação no youtube 
+https://youtu.be/ZRBZrzlEozE
