@@ -1,0 +1,17 @@
+# Integridade do Firmware — NexaSense
+
+## Arquivo analisado
+- Nome: sketch.ino
+- Algoritmo: SHA-256
+- Ambiente de cálculo: Windows PowerShell
+- Data do cálculo: 03/11/2026
+
+## Hash SHA-256
+
+`6C68D4367912602465605A3D059DCC698083DAA7EA5DA94021A83ABF3EDED64B`
+
+## Observação
+
+O hash foi calculado sobre o código-fonte `sketch.ino`, e não sobre um firmware binário compilado (`.bin`).
+
+Esse valor serve como referência para verificar futuras alterações no arquivo analisado.
